@@ -34,6 +34,27 @@ router.post("/api/notes", (req,res)=>{
         res.json(DB)
       })
 })
+router.delete("/api/notes/:id", (req,res)=>{
+    let Newdata = []
+    for(let i=0;i < DB.length; i++) {
+     if( DB[i].id != req.params.id){
+         Newdata.push(DB[i])
+     }
+
+    }
+    DB = Newdata
+
+    fs.writeFile("./db/db.json", JSON.stringify(DB) , (err, data) => {
+        if (err) {
+          console.error(err)
+          return
+        }
+        console.log("delete file method",DB)
+        //string as tested with data(0) undefined
+       
+        res.json(DB)
+      })
+})
 module.exports = router;
 
 
