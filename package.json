@@ -1,15 +1,14 @@
 {
   "name": "note-taker",
-  "description": "## Your Task",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "## Your Task",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Syed",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
-    "node": "^16.1.0"
+    "express": "^4.16.4"
   }
 }

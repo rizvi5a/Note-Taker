@@ -69,15 +69,15 @@ function appendFiles(new_data) {
 })
 }
 
-// app.get ('/', (rq, res) => {
+ app.get ('/public', (rq, res) => {
 
-//   console.log(__dirname);
-//   console.log(path);
-//   res.sendFile(path.join(__dirname, 'view.html'))
+ console.log(__dirname);
+ // console.log(path);
+  res.sendFile(path.join(__dirname, 'index.html'))
 
-// })
+ })
 
-app.get ('/', (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
+// app.get ('/', (req, res) =>  res.sendFile(path.join(__dirname, 'index.html')));
 
 
 app.listen(PORT, () => console.log(`App listening on PORT ${PORT}`));
